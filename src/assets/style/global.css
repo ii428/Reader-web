@@ -1,0 +1,81 @@
+/* import files */
+@import './reset.css';
+
+
+/* init style */
+html,
+body {
+    overflow: hidden;
+}
+
+
+/* global var */
+:root {
+    /* status colors */
+    --main-color: #3366FF;
+    --ornament-color-pink: #EC51A3;
+    --ornament-color-orange: #EF876F;
+
+    /* font color */
+    --font-main-color: #313232;
+    --font-assist-color: #B7BEBB;
+
+    /* space size */
+    --split-size: .4rem;
+    --clearance-size: .2rem;
+}
+
+
+/* global style */
+.icon {
+    font-size: .6rem;
+    color: var(--font-assist-color);
+}
+
+/* animations */
+.slide-down-enter,
+.slide-down-leave-to {
+    transform: translateY(-2.8rem);
+}
+.slide-up-enter,
+.slide-up-leave-to {
+    transform: translateY(2.8rem);
+}
+.slide-down-enter-to,
+.slide-down-leave,
+.slide-up-enter-to,
+.slide-up-leave {
+    transform: translateY(0);
+}
+.slide-down-enter-active,
+.slide-down-leave-active,
+.slide-up-enter-active,
+.slide-up-leave-active {
+    transition: all .3s linear;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+.fade-enter-to,
+.fade-leave {
+    opacity: 1;
+}
+.fade-enter-active,
+.fade-leave-active {
+    transition: all .3 linear;
+}
+
+.slide-right-enter,
+.slide-right-leave-to {
+    transform: translateX(-100%);
+}
+.slide-right-enter-to,
+.slide-right-leave {
+    transform: translateX(0);
+}
+.slide-right-enter-active,
+.slide-right-leave-active {
+    transition: all .3s linear;
+}

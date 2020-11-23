@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <router-view />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // HelloWorld
   }
 }
+
+// 取屏幕显示区域宽度的10/1作为根元素字体的大小
+document.addEventListener('DOMContentLoaded', () => {
+  const ohtml = document.querySelector('html');
+  let fontSize = window.innerWidth / 10;
+
+  // 限制fontSize过大
+  fontSize = fontSize > 50 ? 50 : fontSize;
+  ohtml.style.fontSize = fontSize + 'px';
+});
+
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
